@@ -1,6 +1,8 @@
 from pyga import Script
 from pyga.builders import Condition, Function, Literal, Rule
 
+#This file is not current. Test first.
+
 # define the attributes
 greenspacePercentage = Attribute("greenspacePercentage", "30") \
   .annotate("Group", ("City Attributes", 0))
