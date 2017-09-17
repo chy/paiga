@@ -1,5 +1,5 @@
 from .internal.writer import Writer
-from pyga import Literal
+from .builders import Literal
 
 class Script(object):
   def __init__(self):
@@ -21,26 +21,3 @@ class Script(object):
       self._writer.newline(1)
     self._writer.Write(self._children[-1].build())
     return self._writer.Done()
-    
-  # def write(path):
-  #   Writer()
-  #
-  # def function(self, name):
-  #   return Function(name)
-  #
-  # def rule(self, name):
-  #   return Rule(name)
-  #
-  # def cond(self):
-  #   return Condition()
-
-  # def cond(self, condition_literal, successor_literal, else_literal):
-  #   condition = Condition().case(Literal(condition_literal), Literal(successor_literal))
-  #   condition.then(Literal(else_literal))
-  #   return condition
-
-  # def literal(self, literal_expression):
-  #   return Literal(literal_expression)
-
-  # def cond(self):
-  #   return self.add(Condition())

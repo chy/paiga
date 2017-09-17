@@ -1,3 +1,5 @@
+# In a typical script, this would be
+# from pyga import Script, Condition
 from pyga import Script, Condition
 
 script = Script()

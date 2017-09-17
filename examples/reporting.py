@@ -1,5 +1,6 @@
-from pyga import Script
-from pyga.builders import Condition, Function, Literal, Rule
+# In a typical script, this would be
+# from pyga import Script, Condition, Literal
+from .. import Script, Condition, Literal
 
 #This file is not current. Test first.
 
