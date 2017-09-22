@@ -1,5 +1,5 @@
-from .internal.writer import Writer
 from .builders import Literal
+from .internal.writer import Writer
 
 class Script(object):
   def __init__(self):

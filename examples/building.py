@@ -1,5 +1,5 @@
-# In a typical script, this would be
-# from pyga import Script, Condition
+# Run this as 'python -m pyga.examples.building' to get around
+# the irritating python import situation.
 from pyga import Script, Condition
 
 script = Script()

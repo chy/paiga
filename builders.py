@@ -1,4 +1,4 @@
-from pyga.internal.entity import *
+from .internal.entity import *
 
 # Public PYGA Api.
 # Users create and manipulate these builders, then pass them to Script
