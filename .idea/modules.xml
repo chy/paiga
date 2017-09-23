@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/pyga.iml" filepath="$PROJECT_DIR$/.idea/pyga.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/paiga.iml" filepath="$PROJECT_DIR$/.idea/paiga.iml" />
     </modules>
   </component>
 </project>
