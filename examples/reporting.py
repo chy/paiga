@@ -1,5 +1,5 @@
 # In a typical script, this would be
-# from pyga import Script, Condition, Literal
+from paiga import Script, Condition, Literal
 from .. import Script, Condition, Literal
 
 #This file is not current. Test first.
@@ -81,4 +81,4 @@ script.add(GreenSpace())
 script.add(OpenSpace())
 script.add(Ground())
 
-print(script.compile())
+print(script.serialize())

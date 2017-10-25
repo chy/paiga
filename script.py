@@ -1,5 +1,5 @@
-from .builders import Literal
-from .internal.writer import Writer
+from builders import Literal
+from internal.writer import Writer
 
 class Script(object):
   def __init__(self):
@@ -7,17 +7,18 @@ class Script(object):
     self._writer = Writer()
 
   def add(self, child):
-    # we special-case strings so that people don't need to write "Literal" everywhere.
+    # We special-case strings so that people don't need to write "Literal" everywhere.
     if isinstance(child, str):
       child = Literal(child)
     self._children.append(child)
-    return child
+    return self
 
   # Converts everything in the script to a string
   # and returns it.
-  def compile(self):
-    for thing in self._children[:-1]:
-      self._writer.Write(thing.build())
+  def serialize(self):
+    for child in self._children[:-1]:
+      child.build().accept(self._writer)
       self._writer.newline(1)
-    self._writer.Write(self._children[-1].build())
-    return self._writer.Done()
+    # We don't want a newline after the last line, so we add it separately.
+    self._children[-1].build().accept(self._writer)
+    return self._writer.done()
